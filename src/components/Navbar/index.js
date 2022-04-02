@@ -9,6 +9,7 @@ const Navbar = () => {
         <NavBrand src={Logo} alt='jejak literasi logo' />
       </div>
       <NavbarNav>
+        <NavLink isActive>Home</NavLink>
         <NavLink>Tentang Kami</NavLink>
         <NavLink>Program Kami</NavLink>
         <NavLink>Dokumentasi</NavLink>

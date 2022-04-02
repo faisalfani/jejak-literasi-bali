@@ -30,6 +30,6 @@ export const NavbarNav = styled.ul`
 export const NavLink = styled.li`
   display: inline-block;
   color: white;
-  font-weight: 500;
+  font-weight: ${(props) => (props.isActive ? 700 : 500)};
   cursor: pointer;
 `;

@@ -1,18 +1,22 @@
 import Text from 'components/Text';
 import colors from 'constants/colors';
 import React from 'react';
-import {
-  AboutHeading,
-  AboutUsDescContainer,
-  Founder,
-  TextContainer,
-} from './styled';
+import { AboutUsDescContainer, Founder, TextContainer } from './styled';
 import FounderImage from 'assets/img/founder.jpeg';
+import Heading from 'components/Heading';
 
 const AboutUs = () => {
   return (
-    <div className='container'>
-      <AboutHeading>Tentang Kami</AboutHeading>
+    <div
+      className='container'
+      style={{
+        height: '80vh',
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+      }}
+    >
+      <Heading color={colors.primary}>Tentang Kami</Heading>
       <AboutUsDescContainer>
         <TextContainer>
           <Text size='1.1rem' color='black' weight='bolder'>

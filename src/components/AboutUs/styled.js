@@ -1,19 +1,4 @@
-import colors from 'constants/colors';
 import styled from 'styled-components';
-
-export const AboutHeading = styled.h1`
-  width: 100%;
-  text-align: center;
-  font-weight: 700;
-  line-height: 2;
-  color: ${colors.primary};
-  background-image: linear-gradient(98.87deg, #7c2fdf 0%, #984ec1 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-`;
 
 export const AboutUsDescContainer = styled.div`
   display: flex;
