@@ -21,8 +21,21 @@ const StyledHeading = styled.h1`
   margin-bottom: -8px;
 `;
 
-const HeadingGradient = ({ children }) => {
-  return <StyledHeading>{children}</StyledHeading>;
+const MonochromeHeading = styled.h1`
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-weight: 800;
+  font-size: 48px;
+  color: white;
+  margin-bottom: -8px;
+`;
+
+const HeadingGradient = ({ children, type }) => {
+  return type == 'monochrome' ? (
+    <MonochromeHeading>{children} </MonochromeHeading>
+  ) : (
+    <StyledHeading>{children}</StyledHeading>
+  );
 };
 
 export default HeadingGradient;

@@ -6,6 +6,7 @@ import Carousel from './components/Carousel';
 import './App.css';
 import AboutUs from './components/AboutUs';
 import OurProgram from 'components/OurProgram';
+import Documentation from 'components/Documentation';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Carousel />
       <AboutUs />
       <OurProgram />
+      <Documentation />
       <h1>Content</h1>
     </HomelLayout>
   );
