@@ -3,7 +3,7 @@ import colors from 'constants/colors';
 import React from 'react';
 import { AboutUsDescContainer, Founder, TextContainer } from './styled';
 import FounderImage from 'assets/img/founder.jpeg';
-import Heading from 'components/Heading';
+import HeadingGradient from 'components/HeadingGradient';
 
 const AboutUs = () => {
   return (
@@ -16,7 +16,7 @@ const AboutUs = () => {
         flexDirection: 'column',
       }}
     >
-      <Heading color={colors.primary}>Tentang Kami</Heading>
+      <HeadingGradient>Tentang Kami</HeadingGradient>
       <AboutUsDescContainer>
         <TextContainer>
           <Text size='1.1rem' color='black' weight='bolder'>

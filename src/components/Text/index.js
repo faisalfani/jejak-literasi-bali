@@ -7,6 +7,7 @@ const StyledText = styled.div`
   font-size: ${(props) => props.size};
   font-weight: ${(props) => props.weight};
   letter-spacing: ${(props) => props.spacing};
+  display: ${(props) => props.display || 'block'};
 `;
 
 const Text = ({ children, ...restProps }) => {

@@ -18,6 +18,7 @@ const StyledHeading = styled.h1`
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  margin-bottom: -8px;
 `;
 
 const HeadingGradient = ({ children }) => {
