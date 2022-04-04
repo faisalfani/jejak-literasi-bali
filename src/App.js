@@ -8,6 +8,7 @@ import AboutUs from './components/AboutUs';
 import OurProgram from 'components/OurProgram';
 import Documentation from 'components/Documentation';
 import Article from 'components/Article';
+import Testimonial from 'components/Testimonial';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <OurProgram />
       <Documentation />
       <Article />
-      <h1>Content</h1>
+      <Testimonial />
     </HomelLayout>
   );
 }
