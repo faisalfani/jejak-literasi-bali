@@ -55,6 +55,7 @@ const TestiProfile = styled.div`
 
 const TestimonialCarousel = () => {
   const settings = {
+    dots: true,
     className: 'center',
     centerMode: true,
     slidesToShow: 3,

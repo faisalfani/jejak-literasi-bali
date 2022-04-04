@@ -63,7 +63,7 @@ const Article = () => {
             >
               {data.date}
             </Text>
-            <img src={data.image} />
+            <img src={data.image} alt='articleImage' />
             <Text size='1rem' color={colors.primary} weight='700'>
               {data.title}
             </Text>

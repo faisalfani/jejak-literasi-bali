@@ -8,7 +8,6 @@ import CarouselFour from '../../assets/img/carousel-four.jpeg';
 import styled from 'styled-components';
 import NextButton from 'components/NextButton';
 import BackButton from 'components/BackButton';
-import colors from 'constants/colors';
 
 const StyledSlider = styled(Slider)`
   margin-bottom: 4rem;
