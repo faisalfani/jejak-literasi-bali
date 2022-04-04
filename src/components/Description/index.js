@@ -29,7 +29,7 @@ const Description = ({
           </Text>
           &nbsp;{normalTitle}
         </Text>
-        <Text size='0.75rem' weight='400'>
+        <Text size='0.9rem' weight='400'>
           &emsp; {description}
         </Text>
         <Text size='1rem' weight='300'></Text>
