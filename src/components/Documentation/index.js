@@ -12,6 +12,7 @@ const DocumentationContainer = styled.div`
   padding: 2rem;
   gap: 4rem;
   position: relative;
+  overflow: hidden;
   ::after {
     content: '';
     width: 300px;
