@@ -7,6 +7,7 @@ import './App.css';
 import AboutUs from './components/AboutUs';
 import OurProgram from 'components/OurProgram';
 import Documentation from 'components/Documentation';
+import Article from 'components/Article';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <AboutUs />
       <OurProgram />
       <Documentation />
+      <Article />
       <h1>Content</h1>
     </HomelLayout>
   );
