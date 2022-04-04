@@ -1,11 +1,11 @@
 import React from 'react';
 import { ChevronLeft } from 'react-feather';
 
-const BackButton = ({ onClick }) => (
+const BackButton = ({ onClick, isDocumentation }) => (
   <div
     style={{
       position: 'absolute',
-      left: '50px',
+      left: isDocumentation ? '-60px' : '50px',
       top: '50%',
       width: '40px',
       height: '40px',

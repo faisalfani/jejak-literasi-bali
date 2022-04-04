@@ -1,11 +1,11 @@
 import React from 'react';
 import { ChevronRight } from 'react-feather';
 
-const NextButton = ({ onClick }) => (
+const NextButton = ({ onClick, isDocumentation }) => (
   <div
     style={{
       position: 'absolute',
-      right: '50px',
+      right: isDocumentation ? '-60px' : '50px',
       top: '50%',
       width: '40px',
       height: '40px',

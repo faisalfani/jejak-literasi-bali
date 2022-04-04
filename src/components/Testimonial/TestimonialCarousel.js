@@ -64,7 +64,6 @@ const TestimonialCarousel = () => {
     speed: 500,
     variableWidth: true,
     accessibility: false,
-    dots: true,
     nextArrow: <NextButton />,
     prevArrow: <BackButton />,
   };

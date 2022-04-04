@@ -1,3 +1,5 @@
+import BackButton from 'components/BackButton';
+import NextButton from 'components/NextButton';
 import Text from 'components/Text';
 import React from 'react';
 import Slider from 'react-slick';
@@ -18,7 +20,6 @@ const StyledSlider = styled(Slider)`
 const DocumentationCard = styled.div`
   background-color: white;
   padding: 1rem;
-  box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.12);
   border-radius: 15px;
 `;
 
@@ -50,6 +51,8 @@ const DocumentationCarousel = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
+    nextArrow: <NextButton isDocumentation />,
+    prevArrow: <BackButton isDocumentation />,
   };
   return (
     <StyledSlider {...settings}>
