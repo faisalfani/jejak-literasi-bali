@@ -31,7 +31,7 @@ const MonochromeHeading = styled.h1`
 `;
 
 const HeadingGradient = ({ children, type }) => {
-  return type == 'monochrome' ? (
+  return type === 'monochrome' ? (
     <MonochromeHeading>{children} </MonochromeHeading>
   ) : (
     <StyledHeading>{children}</StyledHeading>

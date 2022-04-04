@@ -13,7 +13,7 @@ const Description = ({
 }) => {
   return (
     <AboutUsDescContainer>
-      {type == 'left' && <StyledImage src={imageUrl} alt='descImage' />}
+      {type === 'left' && <StyledImage src={imageUrl} alt='descImage' />}
       <TextContainer>
         <Text size='1rem' color='black' weight='bolder'>
           <Text
@@ -34,7 +34,7 @@ const Description = ({
         </Text>
         <Text size='1rem' weight='300'></Text>
       </TextContainer>
-      {type == 'right' && <StyledImage src={imageUrl} alt='founderImage' />}
+      {type === 'right' && <StyledImage src={imageUrl} alt='founderImage' />}
     </AboutUsDescContainer>
   );
 };
