@@ -13,7 +13,8 @@ const TestimonialContainer = styled.div`
   position: relative;
   ::after {
     content: '';
-    height: 50vh;
+    height: 60vh;
+    border-radius: 50% 50% 0 0;
     position: absolute;
     bottom: 0;
     left: 0;

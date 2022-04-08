@@ -9,6 +9,7 @@ import OurProgram from 'components/OurProgram';
 import Documentation from 'components/Documentation';
 import Article from 'components/Article';
 import Testimonial from 'components/Testimonial';
+import OurTeam from 'components/OurTeam';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Documentation />
       <Article />
       <Testimonial />
+      <OurTeam />
     </HomelLayout>
   );
 }
