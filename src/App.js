@@ -10,6 +10,7 @@ import Documentation from 'components/Documentation';
 import Article from 'components/Article';
 import Testimonial from 'components/Testimonial';
 import OurTeam from 'components/OurTeam';
+import Partner from 'components/Partner';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Article />
       <Testimonial />
       <OurTeam />
+      <Partner />
     </HomelLayout>
   );
 }

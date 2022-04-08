@@ -6,7 +6,7 @@ import { Facebook, Linkedin, Twitter } from 'react-feather';
 import styled from 'styled-components';
 
 const OurTeamContainer = styled.div`
-  margin: 4rem 0;
+  padding-top: 4rem;
   row-gap: 4rem;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@ const ImageGallery = styled.div`
 
 const Image = styled.div`
   flex: 1 20%; /* explanation below */
-  height: 300px;
+  height: 400px;
   background: url(${(props) => props.image});
   background-size: cover;
   background-position: center;
