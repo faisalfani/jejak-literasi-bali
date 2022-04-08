@@ -1,13 +1,16 @@
-import colors from 'constants/colors';
 import React from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import PartnerImage from 'assets/img/partner.png';
+import PartnerImage from 'assets/img/partner2.png';
+import HeadingGradient from 'components/HeadingGradient';
 
 const PartnerContainer = styled.div`
-  background-color: ${colors.primary};
-  height: 20vh;
+  background-color: white;
+  height: 40vh;
+  padding: 4rem 0;
   display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
   align-items: center;
   width: 100%;
 `;
@@ -21,7 +24,7 @@ const StyledSlider = styled(Slider)`
 `;
 
 const Image = styled.img`
-  width: 124px !important;
+  width: 200px !important;
   height: auto;
 `;
 
@@ -37,6 +40,7 @@ const Partner = () => {
   };
   return (
     <PartnerContainer>
+      <HeadingGradient>Partner Kami</HeadingGradient>
       <div className='container'>
         <StyledSlider {...settings}>
           <Image src={PartnerImage} />
