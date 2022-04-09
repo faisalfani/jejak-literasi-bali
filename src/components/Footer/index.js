@@ -31,10 +31,10 @@ const FooterItemWrapper = styled.ul`
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  text-align: center;
 
   ${Devices.phone} {
     align-items: center;
+    text-align: center;
   }
 `;
 

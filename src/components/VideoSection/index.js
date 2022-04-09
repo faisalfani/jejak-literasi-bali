@@ -11,6 +11,7 @@ const VideoContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 80vh;
+  overflow: hidden;
 `;
 
 const VideoBox = styled.div`
