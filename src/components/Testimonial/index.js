@@ -2,6 +2,7 @@ import HeadingGradient from 'components/HeadingGradient';
 import colors from 'constants/colors';
 import React from 'react';
 import styled from 'styled-components';
+import Devices from 'utils/Devices';
 import TestimonialCarousel from './TestimonialCarousel';
 
 const TestimonialContainer = styled.div`
@@ -20,6 +21,9 @@ const TestimonialContainer = styled.div`
     left: 0;
     width: 100%;
     background-color: ${colors.primary}30;
+    ${Devices.phone} {
+      height: 0;
+    }
   }
 `;
 

@@ -3,8 +3,10 @@ import NextButton from 'components/NextButton';
 import Text from 'components/Text';
 import colors from 'constants/colors';
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Slider from 'react-slick';
 import styled from 'styled-components';
+import Devices from 'utils/Devices';
 import testi from './testi';
 
 const StyledSlider = styled(Slider)`
@@ -16,6 +18,16 @@ const StyledSlider = styled(Slider)`
   }
   .slick-list {
     margin: 0 -20px;
+  }
+  ${Devices.phone} {
+    margin-bottom: 0;
+    .slick-cloned {
+      display: none;
+    }
+    .slick-dots {
+      height: 60px;
+      bottom: -40px;
+    }
   }
 `;
 
@@ -54,16 +66,18 @@ const TestiProfile = styled.div`
 `;
 
 const TestimonialCarousel = () => {
+  const isMobile = useMediaQuery({ maxWidth: 480 });
   const settings = {
     dots: true,
     className: 'center',
     centerMode: true,
-    slidesToShow: 3,
+    slidesToShow: isMobile ? 1 : 3,
     slidesToScroll: 1,
     infinite: true,
     speed: 500,
     variableWidth: true,
     accessibility: false,
+    arrows: isMobile ? false : true,
     nextArrow: <NextButton />,
     prevArrow: <BackButton />,
   };
