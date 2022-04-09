@@ -2,6 +2,7 @@ import HeadingGradient from 'components/HeadingGradient';
 import colors from 'constants/colors';
 import React from 'react';
 import styled from 'styled-components';
+import Devices from 'utils/Devices';
 
 const VideoContainer = styled.div`
   display: flex;
@@ -30,6 +31,12 @@ const VideoBox = styled.div`
     border-radius: 50%;
     z-index: -1;
     filter: blur(10px);
+    ${Devices.phone} {
+      width: 200px;
+      height: 200px;
+      right: -200px;
+      top: 0;
+    }
   }
   ::before {
     content: '';
@@ -42,6 +49,12 @@ const VideoBox = styled.div`
     border-radius: 50%;
     z-index: -1;
     filter: blur(10px);
+    ${Devices.phone} {
+      width: 200px;
+      height: 200px;
+      left: -200px;
+      bottom: 0;
+    }
   }
 `;
 
