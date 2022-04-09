@@ -106,7 +106,7 @@ const HomelLayout = ({ children }) => {
         <Navbar />
       )}
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

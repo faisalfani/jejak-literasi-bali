@@ -4,22 +4,31 @@ import React from 'react';
 import { AboutUsDescContainer, Founder, TextContainer } from './styled';
 import FounderImage from 'assets/img/founder.jpeg';
 import HeadingGradient from 'components/HeadingGradient';
+import { useMediaQuery } from 'react-responsive';
 
 const AboutUs = () => {
+  const isMobile = useMediaQuery({ maxWidth: 480 });
   return (
     <div
       className='container'
       style={{
-        height: '80vh',
+        height: !isMobile && '80vh',
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'column',
+        marginTop: isMobile && '3rem',
+        rowGap: isMobile && '4rem',
+        marginBottom: isMobile && '3rem',
       }}
     >
       <HeadingGradient>Tentang Kami</HeadingGradient>
       <AboutUsDescContainer>
         <TextContainer>
-          <Text size='1.1rem' color='black' weight='bolder'>
+          <Text
+            size={isMobile ? '0.9rem' : '1.1rem'}
+            color='black'
+            weight='bolder'
+          >
             <Text
               size='0.8rem'
               weight='600'
@@ -28,8 +37,8 @@ const AboutUs = () => {
             >
               TENTANG KAMI
             </Text>
-            <Text color={colors.primary}>
-              Dibentuk pada 2019 oleh Andika Wirateja,Jejak Literasi Bali
+            <Text color={colors.primary} display='inline'>
+              Dibentuk pada 2019 oleh Andika Wirateja,Jejak Literasi Bali &nbsp;
             </Text>
             adalah komunitas non-formal beranggotakan pemuda-pemudi yang peduli
             pada pendidikan khususnya budaya literasi (baca dan tulis) pada
