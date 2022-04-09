@@ -8,7 +8,7 @@ import Logo from 'assets/img/jejak-logo.png';
 import Text from 'components/Text';
 
 const MobileNavbar = styled.div`
-  height: 5vh;
+  height: 8vh;
   background: linear-gradient(97.49deg, #7c2fdf 37.83%, #984ec1 132.31%);
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@ const NavBrand = styled.img`
 
 const CloseButton = styled.span`
   position: absolute;
-  top: -25px;
+  top: -20px;
   right: -10px;
 `;
 
@@ -72,7 +72,7 @@ const HomelLayout = ({ children }) => {
     <div style={{ position: 'relative' }}>
       {isMobile ? (
         <MobileNavbar>
-          <Menu size='20' color='white' onClick={() => setIsMenuOpen(true)} />
+          <Menu size='24' color='white' onClick={() => setIsMenuOpen(true)} />
           <Sidebar isOpen={isMenuOpen}>
             <NavContainer>
               <NavBrand src={Logo} alt='jejak literasi logo' />
