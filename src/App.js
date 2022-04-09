@@ -11,18 +11,22 @@ import Article from 'components/Article';
 import Testimonial from 'components/Testimonial';
 import OurTeam from 'components/OurTeam';
 import Partner from 'components/Partner';
+import VideoSection from 'components/VideoSection';
+import JoinUs from 'components/JoinUs';
 
 function App() {
   return (
     <HomelLayout>
       <Carousel />
+      <Partner />
       <AboutUs />
       <OurProgram />
       <Documentation />
       <Article />
       <Testimonial />
+      <VideoSection />
       <OurTeam />
-      <Partner />
+      <JoinUs />
     </HomelLayout>
   );
 }

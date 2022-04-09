@@ -1,15 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import PartnerImage from 'assets/img/partner2.png';
-import HeadingGradient from 'components/HeadingGradient';
 import Marquee from 'react-fast-marquee';
 
 const PartnerContainer = styled.div`
   background-color: white;
-  height: 40vh;
-  padding: 4rem 0;
+  height: 10vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   row-gap: 3rem;
   align-items: center;
   width: 100%;
@@ -23,7 +22,6 @@ const Image = styled.img`
 const Partner = () => {
   return (
     <PartnerContainer>
-      <HeadingGradient>Partner Kami</HeadingGradient>
       <div className='container'>
         <Marquee gradient>
           <Image src={PartnerImage} />
