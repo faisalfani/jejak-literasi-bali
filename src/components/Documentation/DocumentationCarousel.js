@@ -2,6 +2,7 @@ import BackButton from 'components/BackButton';
 import NextButton from 'components/NextButton';
 import Text from 'components/Text';
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import docData from './docData';
@@ -46,11 +47,14 @@ const ImageContainer = styled.span`
 `;
 
 const DocumentationCarousel = () => {
+  const isMobile = useMediaQuery({ maxWidth: 480 });
+
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: isMobile ? 1 : 3,
+    slidesToScroll: isMobile ? 1 : 3,
+    arrows: isMobile ? false : true,
     nextArrow: <NextButton isDocumentation />,
     prevArrow: <BackButton isDocumentation />,
   };
