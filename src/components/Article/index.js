@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import Text from 'components/Text';
 import colors from 'constants/colors';
 import article from './article';
+import { useMediaQuery } from 'react-responsive';
+import Devices from 'utils/Devices';
 
 const ArticleContainer = styled.div`
   height: 80vh;
@@ -12,12 +14,19 @@ const ArticleContainer = styled.div`
   flex-direction: column;
   row-gap: 4rem;
   align-items: center;
+  ${Devices.phone} {
+    height: auto;
+  }
 `;
 
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   column-gap: 2rem;
+  ${Devices.phone} {
+    flex-direction: column;
+    row-gap: 3rem;
+  }
 `;
 
 const ArticleBox = styled.div`
@@ -50,6 +59,8 @@ const ReadMoreButton = styled.button`
 `;
 
 const Article = () => {
+  const isMobile = useMediaQuery({ maxWidth: 480 });
+
   return (
     <ArticleContainer>
       <HeadingGradient>Artikel Terbaru</HeadingGradient>
