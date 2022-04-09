@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Slider from 'react-slick';
 import PartnerImage from 'assets/img/partner2.png';
 import HeadingGradient from 'components/HeadingGradient';
+import Marquee from 'react-fast-marquee';
 
 const PartnerContainer = styled.div`
   background-color: white;
@@ -14,14 +14,6 @@ const PartnerContainer = styled.div`
   align-items: center;
   width: 100%;
 `;
-const StyledSlider = styled(Slider)`
-  .slick-slide > div {
-    margin: 0 40px;
-  }
-  .slick-list {
-    margin: 0 -40px;
-  }
-`;
 
 const Image = styled.img`
   width: 200px !important;
@@ -29,20 +21,11 @@ const Image = styled.img`
 `;
 
 const Partner = () => {
-  const settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-  };
   return (
     <PartnerContainer>
       <HeadingGradient>Partner Kami</HeadingGradient>
       <div className='container'>
-        <StyledSlider {...settings}>
+        <Marquee gradient>
           <Image src={PartnerImage} />
           <Image src={PartnerImage} />
           <Image src={PartnerImage} />
@@ -50,9 +33,7 @@ const Partner = () => {
           <Image src={PartnerImage} />
           <Image src={PartnerImage} />
           <Image src={PartnerImage} />
-          <Image src={PartnerImage} />
-          <Image src={PartnerImage} />
-        </StyledSlider>
+        </Marquee>
       </div>
     </PartnerContainer>
   );
