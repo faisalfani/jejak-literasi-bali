@@ -4,6 +4,8 @@ import Logo from 'assets/img/jejak-logo.png';
 import { Facebook, Instagram, Twitter } from 'react-feather';
 import Text from 'components/Text';
 import colors from 'constants/colors';
+import Devices from 'utils/Devices';
+import { useMediaQuery } from 'react-responsive';
 
 const FooterContainer = styled.div`
   display: flex;
@@ -17,6 +19,11 @@ const FooterContainer = styled.div`
 const FooterBrand = styled.div`
   display: flex;
   justify-content: space-between;
+  ${Devices.phone} {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+  }
 `;
 
 const FooterItemWrapper = styled.ul`
@@ -24,6 +31,11 @@ const FooterItemWrapper = styled.ul`
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+  text-align: center;
+
+  ${Devices.phone} {
+    align-items: center;
+  }
 `;
 
 const FooterItem = styled.li`
@@ -36,6 +48,8 @@ const FooterItem = styled.li`
 `;
 
 const Footer = () => {
+  const isMobile = useMediaQuery({ maxWidth: 480 });
+
   return (
     <FooterContainer>
       <div className='container'>
@@ -43,8 +57,8 @@ const Footer = () => {
           <img
             src={Logo}
             alt='jejak literasi logo'
-            width='100px'
-            height='80px'
+            width={isMobile ? '200px' : '100px'}
+            height={isMobile ? '160px' : '80px'}
           />
 
           <FooterItemWrapper>
