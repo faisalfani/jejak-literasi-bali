@@ -4,6 +4,7 @@ import colors from 'constants/colors';
 import React, { useState } from 'react';
 import { Facebook, Linkedin, Twitter } from 'react-feather';
 import styled from 'styled-components';
+import Devices from 'utils/Devices';
 
 const OurTeamContainer = styled.div`
   padding-top: 4rem;
@@ -29,6 +30,10 @@ const Image = styled.div`
   background-repeat: no-repeat;
   transition: all 0.5s;
   position: relative;
+  ${Devices.phone} {
+    flex: 1 50%;
+    height: 300px;
+  }
   ::after {
     content: '';
     transition: all 0.5s;
