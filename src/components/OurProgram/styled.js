@@ -1,5 +1,6 @@
 import colors from 'constants/colors';
 import styled from 'styled-components';
+import Devices from 'utils/Devices';
 
 export const OurProgramContainer = styled.div`
   display: flex;
@@ -15,6 +16,9 @@ export const ProgramContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  ${Devices.phone} {
+    height: auto;
+  }
 `;
 
 export const ProgramIndex = styled.span`

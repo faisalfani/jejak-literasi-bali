@@ -1,6 +1,7 @@
 import Text from 'components/Text';
 import colors from 'constants/colors';
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { AboutUsDescContainer, StyledImage, TextContainer } from './styled';
 
 const Description = ({
@@ -11,11 +12,20 @@ const Description = ({
   normalTitle,
   description,
 }) => {
+  const isMobile = useMediaQuery({ maxWidth: 480 });
+  const renderType = () => {
+    if (type === 'right' && isMobile) {
+      return 'left';
+    }
+    return type;
+  };
   return (
     <AboutUsDescContainer>
-      {type === 'left' && <StyledImage src={imageUrl} alt='descImage' />}
+      {renderType() === 'left' && (
+        <StyledImage src={imageUrl} alt='descImage' />
+      )}
       <TextContainer>
-        <Text size='1rem' color='black' weight='bolder'>
+        <Text size={isMobile ? '0.9rem' : '1rem'} color='black' weight='bolder'>
           <Text
             size='0.8rem'
             weight='600'
@@ -34,7 +44,9 @@ const Description = ({
         </Text>
         <Text size='1rem' weight='300'></Text>
       </TextContainer>
-      {type === 'right' && <StyledImage src={imageUrl} alt='founderImage' />}
+      {renderType() === 'right' && (
+        <StyledImage src={imageUrl} alt='founderImage' />
+      )}
     </AboutUsDescContainer>
   );
 };
