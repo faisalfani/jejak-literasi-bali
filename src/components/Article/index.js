@@ -7,12 +7,12 @@ import article from './article';
 import Devices from 'utils/Devices';
 
 const ArticleContainer = styled.div`
-  height: 80vh;
   padding: 4rem;
   display: flex;
   flex-direction: column;
   row-gap: 4rem;
   align-items: center;
+  margin: 2rem 0;
   ${Devices.phone} {
     height: auto;
     padding: 0;

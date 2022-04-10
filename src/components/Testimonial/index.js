@@ -12,9 +12,10 @@ const TestimonialContainer = styled.div`
   row-gap: 4rem;
   overflow: hidden;
   position: relative;
+  margin: 2rem 0;
   ::after {
     content: '';
-    height: 60vh;
+    height: 60%;
     border-radius: 50% 50% 0 0;
     position: absolute;
     bottom: 0;
