@@ -60,7 +60,7 @@ const PhotoItem = ({ image, thumb, group }) => (
 
 const Documentation = () => {
   return (
-    <DocumentationContainer>
+    <DocumentationContainer id='documentation'>
       <HeadingGradient type='monochrome'>Dokumentasi</HeadingGradient>
       <div className='container'>
         <DocumentationCarousel />

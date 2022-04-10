@@ -12,6 +12,7 @@ const AboutUs = () => {
   return (
     <div
       className='container'
+      id='aboutUs'
       style={{
         height: !isMobile && '80vh',
         display: 'flex',

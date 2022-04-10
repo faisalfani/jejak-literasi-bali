@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import PartnerImage from 'assets/img/partner2.png';
-import Marquee from 'react-fast-marquee';
 import Devices from 'utils/Devices';
 import HeadingGradient from 'components/HeadingGradient';
+import Slider from 'react-slick';
+import { useMediaQuery } from 'react-responsive';
 
 const PartnerContainer = styled.div`
   background-color: white;
@@ -29,40 +30,41 @@ const Image = styled.img`
 `;
 
 const Partner = () => {
+  const isMobile = useMediaQuery({ maxWidth: 480 });
+
+  const settings = {
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    infinite: true,
+    speed: 500,
+    slidesToShow: isMobile ? 3 : 5,
+    slidesToScroll: 1,
+  };
   return (
     <PartnerContainer>
       <HeadingGradient>Media Partner</HeadingGradient>
       <div className='container'>
-        <Marquee gradient pauseOnHover>
-          <Image
-            onClick={() => window.open('https://google.com')}
-            src={PartnerImage}
-          />
-          <Image
-            onClick={() => window.open('https://google.com')}
-            src={PartnerImage}
-          />
-          <Image
-            onClick={() => window.open('https://google.com')}
-            src={PartnerImage}
-          />
-          <Image
-            onClick={() => window.open('https://google.com')}
-            src={PartnerImage}
-          />
-          <Image
-            onClick={() => window.open('https://google.com')}
-            src={PartnerImage}
-          />
-          <Image
-            onClick={() => window.open('https://google.com')}
-            src={PartnerImage}
-          />
-          <Image
-            onClick={() => window.open('https://google.com')}
-            src={PartnerImage}
-          />
-        </Marquee>
+        <Slider {...settings}>
+          <a href='https://google.com'>
+            <Image src={PartnerImage} />
+          </a>
+          <a href='https://google.com'>
+            <Image src={PartnerImage} />
+          </a>
+          <a href='https://google.com'>
+            <Image src={PartnerImage} />
+          </a>
+          <a href='https://google.com'>
+            <Image src={PartnerImage} />
+          </a>
+          <a href='https://google.com'>
+            <Image src={PartnerImage} />
+          </a>
+          <a href='https://google.com'>
+            <Image src={PartnerImage} />
+          </a>
+        </Slider>
       </div>
     </PartnerContainer>
   );

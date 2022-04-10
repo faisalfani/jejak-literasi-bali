@@ -6,7 +6,7 @@ import program from './program';
 
 const OurProgram = () => {
   return (
-    <OurProgramContainer>
+    <OurProgramContainer id='ourProgram'>
       {program.map((data, index) => {
         const {
           withSectionTitle,

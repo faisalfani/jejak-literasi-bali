@@ -30,7 +30,7 @@ const TestimonialContainer = styled.div`
 
 const Testimonial = () => {
   return (
-    <TestimonialContainer>
+    <TestimonialContainer id='testimonial'>
       <HeadingGradient>Kata Mereka</HeadingGradient>
       <TestimonialCarousel />
     </TestimonialContainer>

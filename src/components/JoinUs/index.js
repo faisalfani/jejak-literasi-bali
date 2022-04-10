@@ -33,7 +33,7 @@ const JoinUsButton = styled.button`
 
 const JoinUs = () => {
   return (
-    <JoinUsContainer>
+    <JoinUsContainer id='joinUs'>
       <Text>Mari bergabung menjadi bagian dari</Text>
       <Text size='1.2rem' weight='600' color={colors.accent}>
         Komunitas Literasi Bali
