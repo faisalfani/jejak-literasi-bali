@@ -7,6 +7,7 @@ import colors from 'constants/colors';
 import Devices from 'utils/Devices';
 import { useMediaQuery } from 'react-responsive';
 import { paramUrl } from 'utils/paramUrl';
+import router from 'components/Navbar/router';
 
 const FooterContainer = styled.div`
   display: flex;
@@ -103,36 +104,13 @@ const Footer = () => {
 
           <FooterItemWrapper>
             <Text weight='700'>Navigasi</Text>
-            <FooterItem>
-              <a href='facebook.com'>
-                <Text size='0.9rem'>Beranda</Text>
-              </a>
-            </FooterItem>
-            <FooterItem>
-              <a href='facebook.com'>
-                <Text size='0.9rem'>Tentang Kami</Text>
-              </a>
-            </FooterItem>
-            <FooterItem>
-              <a href='facebook.com'>
-                <Text size='0.9rem'>Program Kami</Text>
-              </a>
-            </FooterItem>
-            <FooterItem>
-              <a href='facebook.com'>
-                <Text size='0.9rem'>Dokumentasi</Text>
-              </a>
-            </FooterItem>
-            <FooterItem>
-              <a href='facebook.com'>
-                <Text size='0.9rem'>Kata Mereka</Text>
-              </a>
-            </FooterItem>
-            <FooterItem>
-              <a href='facebook.com'>
-                <Text size='0.9rem'>Gabung Relawan</Text>
-              </a>
-            </FooterItem>
+            {router.map((data) => (
+              <FooterItem>
+                <a href={data.path}>
+                  <Text size='0.9rem'>{data.name}</Text>
+                </a>
+              </FooterItem>
+            ))}
           </FooterItemWrapper>
           <FooterItemWrapper>
             <Text weight='700'>Sosial Media</Text>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import { Menu, X } from 'react-feather';
 import Logo from 'assets/img/jejak-logo.png';
 import Text from 'components/Text';
+import router from 'components/Navbar/router';
+import { debounce } from 'lodash';
 
 const MobileNavbar = styled.div`
   height: 8vh;
@@ -16,10 +18,10 @@ const MobileNavbar = styled.div`
 `;
 
 const Sidebar = styled.div`
-  position: absolute;
+  position: fixed;
   left: ${(props) => (props.isOpen ? '0' : '-60vw')};
   top: 0;
-  height: 100vh;
+  height: 100%;
   width: 60vw;
   background-color: white;
   transition: all 0.3s;
@@ -71,7 +73,7 @@ const HomelLayout = ({ children }) => {
   return (
     <div style={{ position: 'relative' }}>
       {isMobile ? (
-        <MobileNavbar>
+        <MobileNavbar id='beranda'>
           <Menu size='24' color='white' onClick={() => setIsMenuOpen(true)} />
           <Sidebar isOpen={isMenuOpen}>
             <NavContainer>
@@ -80,24 +82,11 @@ const HomelLayout = ({ children }) => {
                 <X size='24' />
               </CloseButton>
               <NavItemContainer>
-                <NavItem>
-                  <Text weight='bolder'>Beranda</Text>
-                </NavItem>
-                <NavItem>
-                  <Text>Tentang Kami</Text>
-                </NavItem>
-                <NavItem>
-                  <Text>Program Kami</Text>
-                </NavItem>
-                <NavItem>
-                  <Text>Dokumentasi</Text>
-                </NavItem>
-                <NavItem>
-                  <Text>Kata Mereka</Text>
-                </NavItem>
-                <NavItem>
-                  <Text>Gabung Relawan</Text>
-                </NavItem>
+                {router.map((data) => (
+                  <NavItem href={data.path}>
+                    <Text href={data.path}>{data.name}</Text>
+                  </NavItem>
+                ))}
               </NavItemContainer>
             </NavContainer>
           </Sidebar>
