@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import docData from './docData';
+import { useLightgallery } from 'react-lightgallery';
 
 const StyledSlider = styled(Slider)`
   margin-bottom: 4rem;
@@ -46,6 +47,17 @@ const ImageContainer = styled.span`
   text-align: center;
 `;
 
+const Images = ({ data, group }) => {
+  const { openGallery } = useLightgallery();
+
+  return (
+    <ImageContainer onClick={() => openGallery(`group${group}`)}>
+      <DocImage src={data.image} />
+      <Text>{data.title}</Text>
+    </ImageContainer>
+  );
+};
+
 const DocumentationCarousel = () => {
   const isMobile = useMediaQuery({ maxWidth: 480 });
 
@@ -60,12 +72,9 @@ const DocumentationCarousel = () => {
   };
   return (
     <StyledSlider {...settings}>
-      {docData.map((data) => (
+      {docData.map((data, idx) => (
         <DocumentationCard>
-          <ImageContainer>
-            <DocImage src={data.image} />
-            <Text>{data.title}</Text>
-          </ImageContainer>
+          <Images data={data} group={idx + 1} />
         </DocumentationCard>
       ))}
     </StyledSlider>

@@ -13,21 +13,24 @@ import OurTeam from 'components/OurTeam';
 import Partner from 'components/Partner';
 import VideoSection from 'components/VideoSection';
 import JoinUs from 'components/JoinUs';
+import { LightgalleryProvider } from 'react-lightgallery';
 
 function App() {
   return (
-    <HomelLayout>
-      <Carousel />
-      <AboutUs />
-      <OurProgram />
-      <Documentation />
-      <Article />
-      <Testimonial />
-      <VideoSection />
-      <Partner />
-      <OurTeam />
-      <JoinUs />
-    </HomelLayout>
+    <LightgalleryProvider>
+      <HomelLayout>
+        <Carousel />
+        <AboutUs />
+        <OurProgram />
+        <Documentation />
+        <Article />
+        <Testimonial />
+        <VideoSection />
+        <Partner />
+        <OurTeam />
+        <JoinUs />
+      </HomelLayout>
+    </LightgalleryProvider>
   );
 }
 
