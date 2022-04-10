@@ -7,15 +7,14 @@ import HeadingGradient from 'components/HeadingGradient';
 
 const PartnerContainer = styled.div`
   background-color: white;
-  height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   row-gap: 3rem;
   align-items: center;
   width: 100%;
+  margin: 2rem 0;
   ${Devices.phone} {
-    height: auto;
     margin: 4rem 0;
   }
 `;

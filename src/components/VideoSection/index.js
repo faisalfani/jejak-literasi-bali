@@ -10,7 +10,7 @@ const VideoContainer = styled.div`
   row-gap: 3rem;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  margin: 4rem 0;
   overflow: hidden;
 `;
 
