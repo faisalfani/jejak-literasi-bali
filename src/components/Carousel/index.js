@@ -9,6 +9,9 @@ import CarouselFour from '../../assets/img/carousel-four.jpeg';
 import styled from 'styled-components';
 import NextButton from 'components/NextButton';
 import BackButton from 'components/BackButton';
+import colors from 'constants/colors';
+import { useMediaQuery } from 'react-responsive';
+import Devices from 'utils/Devices';
 
 const StyledSlider = styled(Slider)`
   margin-bottom: 4rem;
@@ -17,10 +20,20 @@ const StyledSlider = styled(Slider)`
     justify-content: center;
     column-gap: 0.5rem;
     bottom: 30px;
+    ${Devices.phone} {
+      bottom: 20px;
+      column-gap: 0.8rem;
+    }
+    .slick-active {
+      a {
+        background-color: ${colors.accent}90 !important;
+      }
+    }
   }
 `;
 
 const Carousel = () => {
+  const isMobile = useMediaQuery({ maxWidth: 480 });
   const settings = {
     customPaging: (i) => (
       <a
@@ -46,6 +59,7 @@ const Carousel = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    arrows: isMobile ? false : true,
     nextArrow: <NextButton />,
     prevArrow: <BackButton />,
   };

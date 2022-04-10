@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import PartnerImage from 'assets/img/partner2.png';
 import Marquee from 'react-fast-marquee';
 import Devices from 'utils/Devices';
+import HeadingGradient from 'components/HeadingGradient';
 
 const PartnerContainer = styled.div`
   background-color: white;
-  height: 10vh;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,13 +15,15 @@ const PartnerContainer = styled.div`
   align-items: center;
   width: 100%;
   ${Devices.phone} {
-    height: 5vh;
+    height: auto;
+    margin: 4rem 0;
   }
 `;
 
 const Image = styled.img`
   width: 200px;
   height: auto;
+  cursor: pointer;
   ${Devices.phone} {
     width: 150px;
   }
@@ -29,15 +32,37 @@ const Image = styled.img`
 const Partner = () => {
   return (
     <PartnerContainer>
+      <HeadingGradient>Media Partner</HeadingGradient>
       <div className='container'>
-        <Marquee gradient>
-          <Image src={PartnerImage} />
-          <Image src={PartnerImage} />
-          <Image src={PartnerImage} />
-          <Image src={PartnerImage} />
-          <Image src={PartnerImage} />
-          <Image src={PartnerImage} />
-          <Image src={PartnerImage} />
+        <Marquee gradient pauseOnHover>
+          <Image
+            onClick={() => window.open('https://google.com')}
+            src={PartnerImage}
+          />
+          <Image
+            onClick={() => window.open('https://google.com')}
+            src={PartnerImage}
+          />
+          <Image
+            onClick={() => window.open('https://google.com')}
+            src={PartnerImage}
+          />
+          <Image
+            onClick={() => window.open('https://google.com')}
+            src={PartnerImage}
+          />
+          <Image
+            onClick={() => window.open('https://google.com')}
+            src={PartnerImage}
+          />
+          <Image
+            onClick={() => window.open('https://google.com')}
+            src={PartnerImage}
+          />
+          <Image
+            onClick={() => window.open('https://google.com')}
+            src={PartnerImage}
+          />
         </Marquee>
       </div>
     </PartnerContainer>

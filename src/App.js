@@ -18,13 +18,13 @@ function App() {
   return (
     <HomelLayout>
       <Carousel />
-      <Partner />
       <AboutUs />
       <OurProgram />
       <Documentation />
       <Article />
       <Testimonial />
       <VideoSection />
+      <Partner />
       <OurTeam />
       <JoinUs />
     </HomelLayout>

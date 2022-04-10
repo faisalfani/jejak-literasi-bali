@@ -6,8 +6,8 @@ export const AboutUsDescContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  padding: 2rem;
-  margin: 1rem;
+  padding: 2rem 0;
+  margin: 1rem 0;
   column-gap: 6rem;
   ${Devices.phone} {
     flex-direction: column-reverse;

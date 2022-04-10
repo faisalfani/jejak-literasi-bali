@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Text from 'components/Text';
 import colors from 'constants/colors';
 import article from './article';
-import { useMediaQuery } from 'react-responsive';
 import Devices from 'utils/Devices';
 
 const ArticleContainer = styled.div`
@@ -16,6 +15,9 @@ const ArticleContainer = styled.div`
   align-items: center;
   ${Devices.phone} {
     height: auto;
+    padding: 0;
+    height: auto;
+    margin: 4rem 0;
   }
 `;
 
@@ -59,8 +61,6 @@ const ReadMoreButton = styled.button`
 `;
 
 const Article = () => {
-  const isMobile = useMediaQuery({ maxWidth: 480 });
-
   return (
     <ArticleContainer>
       <HeadingGradient>Artikel Terbaru</HeadingGradient>
@@ -75,10 +75,15 @@ const Article = () => {
               {data.date}
             </Text>
             <img src={data.image} alt='articleImage' />
-            <Text size='1rem' color={colors.primary} weight='700'>
+            <Text
+              size='1rem'
+              color={colors.primary}
+              weight='700'
+              align='justify'
+            >
               {data.title}
             </Text>
-            <Text size='0.9rem'>
+            <Text size='0.9rem' align='justify'>
               {data.description.length > 120
                 ? `${data.description.slice(0, 120)}...`
                 : data.description}

@@ -25,7 +25,12 @@ const Description = ({
         <StyledImage src={imageUrl} alt='descImage' />
       )}
       <TextContainer>
-        <Text size={isMobile ? '0.9rem' : '1rem'} color='black' weight='bolder'>
+        <Text
+          size={isMobile ? '0.9rem' : '1rem'}
+          color='black'
+          weight='bolder'
+          align='justify'
+        >
           <Text
             size='0.8rem'
             weight='600'
@@ -39,7 +44,7 @@ const Description = ({
           </Text>
           &nbsp;{normalTitle}
         </Text>
-        <Text size='0.9rem' weight='400'>
+        <Text size='0.9rem' weight='400' align='justify'>
           &emsp; {description}
         </Text>
         <Text size='1rem' weight='300'></Text>

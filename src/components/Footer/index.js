@@ -35,6 +35,7 @@ const FooterItemWrapper = styled.ul`
   ${Devices.phone} {
     align-items: center;
     text-align: center;
+    padding: 0;
   }
 `;
 

@@ -3,6 +3,7 @@ import NextButton from 'components/NextButton';
 import Text from 'components/Text';
 import colors from 'constants/colors';
 import React from 'react';
+import { Facebook } from 'react-feather';
 import { useMediaQuery } from 'react-responsive';
 import Slider from 'react-slick';
 import styled from 'styled-components';
@@ -65,6 +66,24 @@ const TestiProfile = styled.div`
   row-gap: 1rem;
 `;
 
+const ImageWrapper = styled.span`
+  position: relative;
+`;
+
+const TestiSocial = styled.div`
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: linear-gradient(98.87deg, #7c2fdf 30%, ${colors.accent} 100%);
+  z-index: 100;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  color: white;
+`;
+
 const TestimonialCarousel = () => {
   const isMobile = useMediaQuery({ maxWidth: 480 });
   const settings = {
@@ -86,7 +105,14 @@ const TestimonialCarousel = () => {
       {testi.map((data) => (
         <DocumentationCard style={{ width: 400 }}>
           <ImageContainer>
-            <DocImage src={data.image} />
+            <ImageWrapper>
+              <DocImage src={data.image} />
+              <TestiSocial>
+                <a>
+                  <Facebook size='20' />
+                </a>
+              </TestiSocial>
+            </ImageWrapper>
             <TestiProfile>
               <div>
                 <Text color={colors.primary} weight='600'>
@@ -96,7 +122,9 @@ const TestimonialCarousel = () => {
                   {data.position}
                 </Text>
               </div>
-              <Text size='0.9rem'>{data.testimonial}</Text>
+              <Text size='0.9rem' align='justify'>
+                {data.testimonial}
+              </Text>
             </TestiProfile>
           </ImageContainer>
         </DocumentationCard>

@@ -28,6 +28,7 @@ const AboutUs = () => {
             size={isMobile ? '0.9rem' : '1.1rem'}
             color='black'
             weight='bolder'
+            align='justify'
           >
             <Text
               size='0.8rem'
@@ -38,13 +39,13 @@ const AboutUs = () => {
               TENTANG KAMI
             </Text>
             <Text color={colors.primary} display='inline'>
-              Dibentuk pada 2019 oleh Andika Wirateja,Jejak Literasi Bali &nbsp;
-            </Text>
+              Dibentuk pada 2019 oleh Andika Wirateja,Jejak Literasi Bali
+            </Text>{' '}
             adalah komunitas non-formal beranggotakan pemuda-pemudi yang peduli
             pada pendidikan khususnya budaya literasi (baca dan tulis) pada
             anak-anak di wilayah pelosok di Bali.
           </Text>
-          <Text size='0.75rem' weight='400'>
+          <Text size='0.9rem' weight='400' align='justify'>
             &emsp; Berbeda dengan komunitas berbasis pendidikan lainnya, dalam
             komunitas ini kegiatan volunteering mengajar diisi juga dengan
             membuat pojok baca/ bedah perpustakaan. Program ini dilakukan agar
