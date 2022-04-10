@@ -18,6 +18,7 @@ export const ProgramContainer = styled.div`
   flex-direction: column;
   ${Devices.phone} {
     height: auto;
+    margin: 0;
   }
 `;
 
