@@ -53,43 +53,8 @@ const FooterItem = styled.li`
   }
 `;
 
-const SubmitButton = styled.button`
-  border: solid ${colors.primary} 1px;
-  border-radius: 5px;
-  background-color: white;
-  padding: 4px 10px;
-  display: inline-block;
-  width: fit-content;
-  color: ${colors.primary};
-  transition: all 0.5s;
-  :hover {
-    background: linear-gradient(97.49deg, #7c2fdf 37.83%, #984ec1 132.31%);
-    color: white;
-  }
-  ${Devices.phone} {
-    width: 100%;
-  }
-`;
-
 const Footer = () => {
   const isMobile = useMediaQuery({ maxWidth: 480 });
-
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [text, setText] = useState('');
-  const [isSubmit, setIsSubmit] = useState(false);
-
-  const handleContactUsClicked = () => {
-    setIsSubmit(true);
-    const waParam = {
-      text,
-    };
-    if (name && email && text) {
-      window.open(
-        `https://api.whatsapp.com/send?phone=6280008008&${paramUrl(waParam)}`
-      );
-    }
-  };
 
   return (
     <FooterContainer>
@@ -139,47 +104,6 @@ const Footer = () => {
               Jl. Pulau Saelus I No.18, Pedungan, Denpasar Selatan, Kota
               Denpasar, Bali 80114
             </Text>
-            <Text style={{ marginTop: '1rem' }} weight='700'>
-              Contact Us
-            </Text>
-            <div class='form-group'>
-              <input
-                type='text'
-                class={`form-control ${isSubmit && !name && 'is-invalid'}`}
-                id='nameInput'
-                placeholder='Name'
-                value={name}
-                onChange={({ target }) => setName(target.value)}
-              />
-            </div>
-            <div class='form-group'>
-              <input
-                type='email'
-                class={`form-control ${isSubmit && !email && 'is-invalid'}`}
-                id='exampleInputEmail1'
-                aria-describedby='emailHelp'
-                placeholder='Email'
-                value={email}
-                onChange={({ target }) => setEmail(target.value)}
-              />
-            </div>
-            <div class='form-group'>
-              <textarea
-                class={`form-control ${isSubmit && !text && 'is-invalid'}`}
-                id='exampleFormControlTextarea1'
-                rows='3'
-                placeholder='Pesan'
-                value={text}
-                onChange={({ target }) => setText(target.value)}
-              ></textarea>
-            </div>
-            <SubmitButton
-              type='submit'
-              class='btn btn-primary'
-              onClick={handleContactUsClicked}
-            >
-              Submit
-            </SubmitButton>
           </FooterItemWrapper>
         </FooterBrand>
       </div>

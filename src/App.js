@@ -14,6 +14,7 @@ import Partner from 'components/Partner';
 import VideoSection from 'components/VideoSection';
 import JoinUs from 'components/JoinUs';
 import { LightgalleryProvider } from 'react-lightgallery';
+import ContactUs from 'components/ContactUs';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Partner />
         <OurTeam />
         <JoinUs />
+        <ContactUs />
       </HomelLayout>
     </LightgalleryProvider>
   );

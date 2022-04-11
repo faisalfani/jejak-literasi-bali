@@ -23,6 +23,10 @@ const router = [
     name: 'Gabung Relawan',
     path: '#joinUs',
   },
+  {
+    name: 'Hubungi Kami',
+    path: '#contactUs',
+  },
 ];
 
 export default router;
