@@ -16,6 +16,7 @@ const FooterContainer = styled.div`
   padding: 2rem 0;
   width: 100%;
   align-items: center;
+  background-color: ${colors.primary}30;
 `;
 
 const FooterBrand = styled.div`
